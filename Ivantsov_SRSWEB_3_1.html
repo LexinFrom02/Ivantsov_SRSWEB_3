@@ -1,12 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ivantsov_SRSWEB_3_1</title>
 </head>
+
 <body>
-    
+    <h1>Продажа квартир КВАДРИТО</h1>
+    <p>Заполните форму ниже о квартире, которую хотите выставить на продажу:</p>
+    <form action="post" id_selling_info>
+        <table cellpadding="2">
+            <tr>
+                <td>
+                    <b>Город:</b>
+                </td>
+                <td>
+                    <select id="city_select">
+                        <option id="option_0" name="choose_city" value="-1">Выберите город для продажи
+                            ___________________
+                        </option>
+                        <option id="city_option_1" name="Moscow" value="0">Москва</option>
+                        <option id="city_option_2" name="St-Petersburg" value="1">Санкт-Петербург</option>
+                        <option id="city_option_3" name="Novosibirsk" value="2">Новосибирск</option>
+                        <option id="city_option_4" name="Voronezh" value="3">Воронеж</option>
+                        <option id="city_option_5" name="Vologda" value="4">Вологда</option>
+                        <option id="city_option_5" name="Magadan" value="5">Магадан</option>
+                    </select>
+                </td>
+            </tr>
+            <br>
+            <tr>
+                <td valign="top">
+                    <b>Материал здания:</b>
+                </td>
+                <td>
+                    <input type="checkbox" id="kirpich" name="Кирпич" value="0" multiple />
+                    <label for="kirpich">Кирпич</label><br>
+                    <input type="checkbox" id="bloki" name="Кирпич" value="1" multiple />
+                    <label for="kirpich">Блоки</label><br>
+                    <input type="checkbox" id="kirpich" name="Кирпич" value="2" multiple />
+                    <label for="kirpich">Монолит</label><br>
+                    <input type="checkbox" id="kirpich" name="Кирпич" value="3" multiple />
+                    <label for="kirpich">Панель</label><br>
+                    <input type="checkbox" id="kirpich" name="Кирпич" value="4" multiple />
+                    <label for="kirpich">Дерево</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <b>Общая площадь (м<sup>2</sup>):</b>
+                </td>
+                <td>
+                    <input type="text" name="basic_m_start" id="square_start" placeholder="ОТ" maxlength="21">
+                    <input type="text" name="basic_m_end" id="square_end" placeholder="ДО" maxlength="21">
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <b>Общая площадь (м<sup>2</sup>):</b>
+                </td>
+                <td>
+                    <input type="text" name="basic_m_start" id="square_start" placeholder="ОТ" maxlength="21">
+                    <input type="text" name="basic_m_end" id="square_end" placeholder="ДО" maxlength="21">
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <b>Площадь кухни (м<sup>2</sup>):</b>
+                </td>
+                <td>
+                    <input type="text" name="kitchen_m_start" id="kitchen_start" placeholder="ОТ" maxlength="21">
+                    <input type="text" name="kitchen_m_end" id="kitchen_end" placeholder="ДО" maxlength="21">
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <b>Жилая площадь (м<sup>2</sup>):</b>
+                </td>
+                <td>
+                    <input type="text" name="live_m_start" id="live_start" placeholder="ОТ" maxlength="21">
+                    <input type="text" name="live_m_end" id="live_end" placeholder="ДО" maxlength="21">
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <b>Год постройки:</b>
+                </td>
+                <td>
+                    <input type="text" name="years_m_start" id="years_start" placeholder="ОТ" maxlength="21">
+                    <input type="text" name="years_m_end" id="years_end" placeholder="ДО" maxlength="21">
+                </td>
+            </tr>
+            <tr>
+                <td valign="center">
+                    <b>Этаж:</b>
+                </td>
+                <td>
+                    <input type="text" name="level_m_start" id="level_start" placeholder="ОТ" maxlength="21">
+                    <input type="text" name="level_m_end" id="level_end" placeholder="ДО" maxlength="21">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="checkbox" name="not_end" id="last_floor">
+                    <label for="last_floor">Не последний</label>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <b>Этажей в доме:</b>
+                </td>
+                <td>
+                    <input type="text" name="basic_m_start" id="square_start" placeholder="ОТ" maxlength="21">
+                    <input type="text" name="basic_m_end" id="square_end" placeholder="ДО" maxlength="21">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>До метро (по карте):</b>
+                </td>
+                <td>
+                    <select id="city_select">
+                        <option id="distance_option_0" name="choose_city" value="-1" width="15px">Выберите расстояние
+                            __________________________</option>
+                        <option id="distance_option_1" name="near_500" value="500m">До 7 мин. пешком (до 500 м.)
+                        </option>
+                        <option id="distance_option_2" name="near_1000" value="1000m">До 15 мин. пешком (до 1 км.)
+                        </option>
+                        <option id="distance_option_3" name="near_1000" value="1500m">До 21 мин. пешком (до 1,5 км.)
+                        </option>
+                        <option id="distance_option_4" name="near_1000" value="3000m">До 40 мин. пешком (до 3 км.)
+                        </option>
+                        <option id="distance_option_5" name="near_5000" value="5000m">До 1 часа пешком (до 5 км.)
+                        </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><b>Продавец:</b></td>
+                <td>
+                    <input type="radio" name="saler_1" id="saler_info_1" value="0" multiple>
+                    <label for="saler_info_1">Не важно</label><br>
+                    <input type="radio" name="saler_2" id="saler_info_2" value="1" multiple>
+                    <label for="saler_info_2">Агентство</label><br>
+                    <input type="radio" name="saler_3" id="saler_info_3" value="2" multiple>
+                    <label for="saler_info_3">Собственник</label><br>
+                </td>
+            </tr>
+            <br>
+        </table>
+        <button type="submit">Показать предложения</button>
+        <button type="reset">Сбросить фильтры</button>
+    </form>
 </body>
 </html>
